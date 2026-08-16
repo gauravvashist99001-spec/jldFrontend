@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
-      <Link to="/"><h1>📊 Live Data Board</h1></Link>
+      <Link to="/"><h1>📊 CDL result</h1></Link>
       <div className="nav-links">
         {isAdmin ? (
           <>
