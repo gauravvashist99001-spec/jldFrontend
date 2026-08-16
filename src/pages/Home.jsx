@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <div className="container">
-        <p style={{ color: "#94a3b8" }}>
+        <p style={{ color: "#3486f8" }}>
           Data appears automatically once its scheduled time arrives. No login needed to view.
           Click any card to see full-day history and browse older days.
         </p>

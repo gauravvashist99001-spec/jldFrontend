@@ -18,7 +18,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px;
-  background: #dd4a4a;
+  background: #e44a4a;
   border-bottom: 1px solid #1f2937;
 }
 .navbar h1 { font-size: 18px; margin: 0; }
@@ -46,7 +46,8 @@ a { color: inherit; text-decoration: none; }
   flex-direction: column;
 }
 .card:hover { transform: translateY(-3px); border-color: #3b82f6; }
-.card h2 { margin: 0 0 12px; font-size: 16px; color: #93c5fd; }
+.card h2 { margin: 0 0 12px; font-size: 36px; color: #93c5fd;     background-color: rebeccapurple;
+    text-align: center;}
 
 .entry-list { list-style: none; margin: 0; padding: 0; flex: 1; overflow-y: auto; max-height: 220px; }
 .entry-list li {
@@ -99,7 +100,7 @@ button.secondary {
 .admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 @media (max-width: 700px) { .admin-grid { grid-template-columns: 1fr; } }
 
-.back-link { display: inline-block; margin-bottom: 16px; font-size: 14px; color: #93c5fd; }
+.back-link { display: inline-block; margin-bottom: 16px; font-size: 23px; color: #1783ff; }
 
 .big-list-row { gap: 10px; flex-wrap: wrap; }
 .big-list-row.editing-row input {
@@ -121,111 +122,3 @@ button.danger:hover { background: #7f1d1d; color: #fecaca; }
  
 /* position: relative on #warningdiv is unused unless you're positioning
    something inside it absolutely — remove unless that's the plan */
-#warningdiv {
-  position: fixed; /* pins to viewport regardless of scroll */
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px 16px;
-  text-align: center;
-  background: #7f1d1d;
-  z-index: 1000;
-}
-#warning {
-  font-size: clamp(14px, 3.5vw, 20px);
-  margin: 0;
-  color: #fecaca;
-  word-break: break-word;
-}
-.navbar .nav-links { display: flex; gap: 16px; align-items: center; font-size: 14px; }
-.navbar .nav-links a, .navbar .nav-links button {
-  background: none; border: none; color: #93c5fd; cursor: pointer; font-size: 14px;
-}
- 
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
-  margin-top: 24px;
-}
- 
-.card {
-  background: #1e293b;
-  border: 1px solid #334155;
-  border-radius: 12px;
-  padding: 18px;
-  cursor: pointer;
-  transition: transform .15s ease, border-color .15s ease;
-  min-height: 180px;
-  display: flex;
-  flex-direction: column;
-}
-.card:hover { transform: translateY(-3px); border-color: #3b82f6; }
-.card h2 { margin: 0 0 12px; font-size: 16px; color: #93c5fd; }
- 
-.entry-list { list-style: none; margin: 0; padding: 0; flex: 1; overflow-y: auto; max-height: 220px; }
-.entry-list li {
-  display: flex; justify-content: space-between;
-  padding: 6px 0; border-bottom: 1px dashed #334155; font-size: 14px;
-}
-.entry-list li .time { color: #94a3b8; }
-.entry-list li .number { font-weight: 600; color: #4ade80; }
- 
-.empty-msg { color: #64748b; font-size: 13px; font-style: italic; margin-top: 8px; }
- 
-.page-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-.date-controls { display: flex; gap: 10px; align-items: center; }
-.date-controls input, .date-controls select {
-  background: #1e293b; border: 1px solid #334155; color: #e2e8f0;
-  padding: 8px 10px; border-radius: 8px; font-size: 14px;
-}
- 
-.big-list { margin-top: 20px; }
-.big-list-row {
-  display: flex; justify-content: space-between; align-items: center;
-  background: #1e293b; border: 1px solid #334155; border-radius: 8px;
-  padding: 12px 16px; margin-bottom: 8px;
-}
-.big-list-row .time { color: #94a3b8; font-size: 14px; }
-.big-list-row .number { font-size: 20px; font-weight: 700; color: #4ade80; }
- 
-.login-box, .admin-form {
-  background: #1e293b; border: 1px solid #334155; border-radius: 12px;
-  padding: 24px; max-width: 420px; margin: 40px auto;
-}
-.login-box h2, .admin-form h2 { margin-top: 0; }
-.login-box input, .admin-form input, .admin-form select {
-  width: 100%; padding: 10px; margin-bottom: 12px;
-  background: #0f172a; border: 1px solid #334155; color: #e2e8f0; border-radius: 8px;
-}
-button.primary {
-  background: #3b82f6; color: white; border: none; padding: 10px 18px;
-  border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 600;
-}
-button.primary:hover { background: #2563eb; }
-button.secondary {
-  background: transparent; color: #93c5fd; border: 1px solid #334155;
-  padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 14px;
-}
- 
-.error-msg { color: #f87171; font-size: 13px; margin-top: -6px; margin-bottom: 12px; }
-.success-msg { color: #4ade80; font-size: 13px; margin-bottom: 12px; }
- 
-.admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-@media (max-width: 700px) { .admin-grid { grid-template-columns: 1fr; } }
-.admin-left-col { display: flex; flex-direction: column; gap: 20px; }
- 
-.back-link { display: inline-block; margin-bottom: 16px; font-size: 14px; color: #93c5fd; }
- 
-.big-list-row { gap: 10px; flex-wrap: wrap; }
-.big-list-row.editing-row input {
-  background: #0f172a; border: 1px solid #334155; color: #e2e8f0;
-  padding: 6px 8px; border-radius: 6px; font-size: 14px; max-width: 120px;
-}
-.row-actions { display: flex; gap: 8px; margin-left: auto; }
-button.small { padding: 6px 12px; font-size: 12px; border-radius: 6px; }
-button.danger {
-  background: transparent; color: #f87171; border: 1px solid #7f1d1d;
-  padding: 10px 18px; border-radius: 8px; cursor: pointer; font-size: 14px;
-}
-button.danger:hover { background: #7f1d1d; color: #fecaca; }
